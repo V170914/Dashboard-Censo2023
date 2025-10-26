@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+  background-color: #f8f8f8;
+  color: #31c8b9;
+  line-height: 1.6;
+}
+
+/*====Cabeçalho====*/
+
+#site-header{
+  background-color: #31c8b9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#main-nav {
+  position: fixed;        /* Fixa a barra */
+  top: 100px;                 /* Começa no topo da tela */
+  left: 0;                /* Alinhada à esquerda */
+  width: 220px;           /* Largura da barra lateral */
+  height: calc(100vh - 100px);          /* Altura total da janela */
+  background-color: #1abc9c;
+  padding-top: 30px;
+}
+
+#main-nav ul {
+  display: flex;
+  flex-direction: column; /* Deixa os itens na vertical */
+  gap: 20px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+#main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0;
+  transition: background 0.3s ease;
+}
+
+#main-nav a:hover {
+  background-color: #31c8b9;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+#main-nav {
+  position: fixed;
+  top: 100px;     /* ajusta para começar abaixo do cabeçalho */
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 100px); /* ocupa o restante da tela */
+  background-color: #31c8b9; /*aba de menu*/
+  padding-top: 30px;
+}
+
+/* empurra o conteúdo principal pra não ficar atrás da barra */
+main {
+  margin-left: 220px;
+  padding: 40px;
+}
+
+/*navegaçao*/
+/*
+#main-nav{
+  background-color: #31c8b9;
+  padding: 10px 0;
+}
+
+#main-nav ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+#main-nav a:hover{
+  color:beige;
+}
+*/
+
+/*conteudo principal*/
+main {
+  margin-left: 220px;
+  padding: 40px;
+}
+
+/*yiyulos*/
+h2{
+  margin-bottom: 15px;
+  color: #222;
+  border-bottom: 2px solid #abc9;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+#cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top:30px;
+}
+
+.card{
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.08);
+}
+
+/* rescreve daqui*/
+ .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+  /*FORMATO DOS CARDS*/
+
+.card{
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#Municipios{
+  display: flex;   /**/
+  flex-wrap: wrap; /*aqui delixa do lado mais subiu um pouco ate o dashbord*/
+  gap: 20px; /*aqui deu um espacço de um quadrado para o outro*/
+}
+
+.card{
+  flex: 1 1 250px;
+  max-width: 300px;
+} 
+
+/*seçao de estatistica*/
+#estatistica{
+  margin-top: 50px;
+  background:#fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+#estatistica h2{
+  margin-bottom: 20px;
+  color: #1abc9c;
+  border-bottom: 2px solid #1abc9c;
+  display: inline-block;
+}
+
+.stats-container{
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ======= TEXTOS DOS CARDS ======= */
+.card h3 {
+  margin-bottom: 10px;
+  color: #1abc9c;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ======= BOTÃO ======= */
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1abc9c;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+  @media (max-width: 600px) {
+  #site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  }
+
+
+
+
+
+
+
